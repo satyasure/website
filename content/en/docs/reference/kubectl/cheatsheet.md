@@ -363,7 +363,7 @@ Output format | Description
 `-o=yaml`     | Output a YAML formatted API object
 
 Examples using `-o=custom-columns`:
-
+kubectl get pods -A -o=custom-columns="NAME:.metadata.name,IMAGE:.spec.containers[*].image,NAME:.spec.containers[*].name,CPU:.spec.containers[*].resources.requests.cpu,MEMORY:.spec.containers[*].resources.requests.memory"
 ```bash
 # All images running in a cluster
 kubectl get pods -A -o=custom-columns='DATA:spec.containers[*].image'
